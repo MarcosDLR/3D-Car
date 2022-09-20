@@ -8,7 +8,7 @@
           </v-col>
         </v-row>
       </v-container>
-      <v-row align="center" justify="center">
+      <v-row class="mt-5" align="center" justify="center">
         <v-col md="7" class="carSession">
               <template v-if="loadCar">
                 <div class="content">
@@ -26,33 +26,6 @@
         </v-col>
       </v-row>
     </div>
-    <v-container>
-      <v-row class="session2">
-      <v-col>
-        <v-timeline
-          align-top
-        >
-          <v-timeline-item
-            v-for="(item, i) in items"
-            :key="i"
-            color="primary"
-          >
-            <v-card
-              color="primary"
-              dark
-            >
-              <v-card-title class="text-h6">
-                {{item.title}}
-              </v-card-title>
-              <v-card-text class="white text--primary">
-                <p>{{item.text}}</p>
-              </v-card-text>
-            </v-card>
-          </v-timeline-item>
-        </v-timeline>
-      </v-col>
-    </v-row>
-    </v-container>
   </div>
 </template>
 
@@ -73,18 +46,6 @@
         directionalLight: null,
         mouse: {x: 0,y: 0},
         loadCar: false,
-        items: [
-          {title: '1945', text: 'Primera generacion. Tubos de vacio.'},
-          {title: '1946', text: 'Primera computadora digital de la historia.'},
-          {title: '1947', text: 'Surge la máquina Z3.'},
-          {title: '1947', text: 'Lenguaje FORTRAN o ensamblador.'},
-          {title: '1950', text: 'Surgen las tarjetas perforadas.'},
-          {title: '1955', text: 'Segunda generación. Transitores.'},
-          {title: '1965', text: 'Tercera generación. Circuitos integrados'},
-          {title: '1969', text: 'CTSS Sitema de Tiempo Comparativo'},
-          {title: '1970', text: 'MULTICS implementados'},
-          {title: '1994', text: 'La máquina COLOSSUS'},
-        ]
       }
     },
     watch: {
